@@ -21,7 +21,7 @@ class TodoHeader extends React.Component{
 		      <h1>Todo Header</h1>
 		      <input value={this.props.todo.title} type="text"
 		      		onChange={this.props.onTodoChange} /><br/>
-		      <button>新增</button>
+		      <button onClick={this.props.addTodo}>新增</button>
 			</div>
 		);
 	};
