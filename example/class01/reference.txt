@@ -1,0 +1,7 @@
+npm install --save-dev babel-core babel-eslint babel-loader babel-preset-es2015 babel-preset-react html-webpack-plugin webpack webpack-dev-server 
+
+npm install --save react react-dom
+
+
+-- in package.json
+"dev": "webpack-dev-server --devtool eval --progress --colors --content-base build"
