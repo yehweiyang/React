@@ -2,14 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TodoHeader from './Component/TodoHeader/TodoHeader'
 import TodoList from './Component/TodoList/TodoList'
+import LifeCycle from './Component/LifeCycle/LifeCycle'
 
 class App extends React.Component{
 
 	constructor(props){
 
 		super(props);
-		 this.handleTodoChange=this.handleTodoChange.bind(this);
-		 this.handleAddTodo=this.handleAddTodo.bind(this);
 		 this.state={
 			todo:{
 				id:'0',
@@ -25,7 +24,7 @@ class App extends React.Component{
 	 			title:e.target.value
 	 		}
 	 	});
-	 	console.log(this.state.todo);
+	 	console.log(22);
 	 }
 
 	 handleAddTodo(e){
@@ -42,9 +41,10 @@ class App extends React.Component{
 	render(){
 		  return(	
 		  	<div>
+		  	<LifeCycle/>
 		      	<TodoHeader todo={this.state.todo}
-		      		onTodoChange={this.handleTodoChange}
-		      		addTodo={this.handleAddTodo}/>
+		      		onTodoChange={this.handleTodoChange.bind(this)}
+		      		addTodo={this.handleAddTodo.bind(this)}/>
 	      		<TodoList todos={this.state.todos}/>
 			</div>
 		);
